@@ -66,8 +66,9 @@ const postsReducer = (state = initialState, action) => {
             }
         }
         case SET_FILTER: {
+            let string = action.string
             copyArray = flatArray(state.posts)
-            copyArray = [...copyArray.filter(o => o.title.match(action.string))]
+            copyArray = copyArray.filter(o => o.title.match(string))
             return {
                 ...state,
                 filterPosts: distributorObjectsInArray(copyArray)

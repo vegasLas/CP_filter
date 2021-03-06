@@ -49,18 +49,7 @@
   padding: 0 10px;
   row-gap: 10px;
 }
-.posts__post {
-  padding: 5px 10px;
-  border: 2px solid rgba(255, 255, 255, 1);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 6px;
 
-}
-.posts__title {
-  text-transform: capitalize;
-}
 .app__table-wrapp {
   flex: 0 1 100%;
   max-width: 600px;

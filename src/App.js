@@ -1,24 +1,11 @@
-import logo from './logo.svg';
 import React from 'react'
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { actions, getPosts } from './redux/posts-reducer';
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getCurrentPageSel, getFilterPostsSel, getPostsSel } from './selectors/postsSelectors';
 import Paginator from './common/Paginator';
 
-function Post({ title, body }) {
-  return (
-    <div className="posts__post">
-      <div className="posts__title">
-        {title}
-      </div>
-      <div className="posts__body">
-        {body}
-      </div>
-    </div>
-  )
-}
 function App() {
   console.log("Привет")
   const [count, setCount] = useState(0)
@@ -54,6 +41,7 @@ function App() {
       setCount(0)
     }
   }
+  console.log(posts)
   return (
     <div className="app">
       <label className="app__label">
@@ -66,7 +54,7 @@ function App() {
           <caption className="app__caption">Таблица</caption>
           <thead className="app__names">
             <tr>
-              <th className="app__name"><button>Номер</button></th>
+              <th className="app__name">Номер</th>
               <th className="app__name"><button onClick={submitQueue}>Столбец</button></th>
             </tr>
           </thead>
